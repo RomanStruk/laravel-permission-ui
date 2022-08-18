@@ -4,11 +4,12 @@
     "require": {
         "php": "^7.4|^8.1",
         "ext-json": "*",
-        "spatie/laravel-permission": "^5.0",
+        "spatie/laravel-permission": "^5.5.5",
         "illuminate/support": "~7|~8|~9"
     },
     "require-dev": {
-        "orchestra/testbench": "6.x",
+        "roave/security-advisories": "dev-latest",
+        "orchestra/testbench": "^v6.24.0",
         "nunomaduro/phpinsights": "dev-master",
         "pestphp/pest": "^1.0",
         "pestphp/pest-plugin-laravel": "^1.0"
@@ -17,6 +18,13 @@
     "autoload": {
         "psr-4": {
             "RomanStruk\\LaravelPermissionUi\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RomanStruk\\LaravelPermissionUi\\PermissionsServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
