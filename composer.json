@@ -1,11 +1,13 @@
 {
-    "name": "romanstruk/laraavel-permission-ui",
+    "name": "romanstruk/laravel-permission-ui",
     "description": "Laravel Permission UI",
     "require": {
         "php": "^7.4|^8.1",
         "ext-json": "*",
         "spatie/laravel-permission": "^5.5.5",
-        "illuminate/support": "~7|~8|~9"
+        "illuminate/support": "~7|~8|~9",
+        "livewire/livewire": "^2.10.7",
+        "wire-elements/modal": "dev-main"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
@@ -37,6 +39,9 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "dealerdirect/phpcodesniffer-composer-installer": true
-        }
+        },
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ]
     }
 }
